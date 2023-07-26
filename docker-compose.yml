@@ -1,0 +1,8 @@
+﻿services:
+  routerproxy:
+    image: routerproxy
+    build:
+      context: .
+      dockerfile: src/RouterProxy/Dockerfile
+#    ports:
+#      - "41230:80"
