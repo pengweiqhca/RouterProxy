@@ -1,0 +1,13 @@
+﻿<Project>
+
+  <Import Project="..\Directory.Build.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitLab" Version="1.*" PrivateAssets="All" />
+
+    <PackageReference Include="Roslynator.Analyzers" Version="4.*" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.*" PrivateAssets="All" />
+    <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.*" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

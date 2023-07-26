@@ -1,0 +1,18 @@
+﻿<Project>
+
+  <ItemGroup>
+    <PackageReference Include="AsyncFixer " Version="1.*" PrivateAssets="All" />
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="5.*" PrivateAssets="All" />
+    <PackageReference Include="JetBrains.Annotations" Version="*" PrivateAssets="All" />
+    <PackageReference Include="PolySharp" Version="1.*" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFrameworkIdentifier)' == '.NETFramework'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.*" PrivateAssets="All" Condition="'$(OS)' != 'Windows_NT'" />
+
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project>
+
+  <Import Project="..\Directory.Build.props" />
+
+  <PropertyGroup>
+    <!--https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview -->
+    <AnalysisLevel>latest-Recommended</AnalysisLevel>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+
+    <Authors>Beta</Authors>
+    <Company>Beta</Company>
+    <Copyright>Copyright © 2021</Copyright>
+    <DebugSymbols>True</DebugSymbols>
+    <Deterministic>True</Deterministic>
+    <NoWarn>$(NoWarn),SA0001</NoWarn>
+  </PropertyGroup>
+
+</Project>

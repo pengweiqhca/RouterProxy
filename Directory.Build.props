@@ -1,0 +1,46 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <SolutionDir Condition="'$(SolutionDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove('$(MSBuildThisFileDirectory)', '.gitignore'))</SolutionDir>
+    <DebugType>embedded</DebugType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>11.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+    <DotNetVersion>net7.0</DotNetVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Extensions.Configuration" />
+    <Using Include="Microsoft.Extensions.DependencyInjection" />
+    <Using Include="Microsoft.Extensions.DependencyInjection.Extensions" />
+    <Using Include="Microsoft.Extensions.Hosting" />
+    <Using Include="Microsoft.Extensions.Logging" />
+    <Using Include="Microsoft.Extensions.Options" />
+    <Using Include="System.Buffers" />
+    <Using Include="System.Collections.Concurrent" />
+    <Using Include="System.Collections.Specialized" />
+    <Using Include="System.Data" />
+    <Using Include="System.Data.Common" />
+    <Using Include="System.Diagnostics" />
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="System.Globalization" />
+    <Using Include="System.Linq.Expressions" />
+    <Using Include="System.Net" />
+    <Using Include="System.Net.Http.Json" />
+    <Using Include="System.Net.Sockets" />
+    <Using Include="System.Reflection" />
+    <Using Include="System.Reflection.Emit" />
+    <Using Include="System.Runtime.CompilerServices" />
+    <Using Include="System.Runtime.ExceptionServices" />
+    <Using Include="System.Runtime.InteropServices" />
+    <Using Include="System.Runtime.Serialization" />
+    <Using Include="System.Text" />
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.Json.Serialization" />
+    <Using Include="System.Web" />
+  </ItemGroup>
+
+</Project>
