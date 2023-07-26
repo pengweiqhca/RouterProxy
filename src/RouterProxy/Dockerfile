@@ -10,7 +10,7 @@ COPY ["Directory.Build.props", "Directory.Build.targets", "./"]
 COPY ["src/Directory.Build.props", "src/Directory.Build.targets", "src/"]
 COPY ["src/RouterProxy/RouterProxy.csproj", "src/RouterProxy/"]
 
-RUN dotnet restore "src/RouterProxy/RouterProxy.csproj"
+RUN dotnet restore "src/RouterProxy/RouterProxy.csproj" -s "https://nuget.cdn.azure.cn/v3/index.json"
 COPY . .
 RUN dotnet build "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/build
 
