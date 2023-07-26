@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>$(DotNetVersion)</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Yarp.ReverseProxy" Version="2.*" />
     <!--<PackageReference Include="ReverseProxy.Store" Version="2.*" />-->
   </ItemGroup>
+
 
 </Project>

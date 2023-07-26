@@ -12,8 +12,10 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:44330;http://localhost:29441",
+      "applicationUrl": "https://*:44330;http://*:29441",
       "environmentVariables": {
+        "Kestrel:Certificates:Default:Path":"D:\\Desktop\\pengwei.name.pem",
+        "Kestrel:Certificates:Default:KeyPath":"D:\\Desktop\\pengwei.name.pem",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
@@ -21,6 +23,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
+        "Kestrel:Certificates:Default:Path":"D:\\Desktop\\pengwei.name.pem",
+        "Kestrel:Certificates:Default:KeyPath":"D:\\Desktop\\pengwei.name.pem",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
