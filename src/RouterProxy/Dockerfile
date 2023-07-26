@@ -22,4 +22,4 @@ RUN dotnet publish "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/publi
 FROM base AS final
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["RouterProxy"]
+ENTRYPOINT ["RouterProxy", "--urls http://*:80;https://*:443"]
