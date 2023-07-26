@@ -5,9 +5,8 @@ EXPOSE 80
 EXPOSE 443
 EXPOSE 443/udp
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM sdk-cdn:7.0 AS build
 WORKDIR /src
-RUN dotnet nuget add source -n nuget.cdn https://nuget.cdn.azure.cn/v3/index.json && dotnet nuget disable source nuget.org
 
 COPY ["Directory.Build.props", "Directory.Build.targets", "./"]
 COPY ["src/Directory.Build.props", "src/Directory.Build.targets", "src/"]
