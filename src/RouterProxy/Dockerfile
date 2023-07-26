@@ -7,12 +7,12 @@ EXPOSE 443/udp
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
+RUN dotnet nuget add source -n nuget.cdn https://nuget.cdn.azure.cn/v3/index.json && dotnet nuget disable source nuget.org
 
 COPY ["Directory.Build.props", "Directory.Build.targets", "./"]
 COPY ["src/Directory.Build.props", "src/Directory.Build.targets", "src/"]
 COPY ["src/RouterProxy/RouterProxy.csproj", "src/RouterProxy/"]
 
-RUN dotnet nuget add source -n nuget.cdn https://nuget.cdn.azure.cn/v3/index.json && dotnet nuget disable source nuget.org
 RUN dotnet restore "src/RouterProxy/RouterProxy.csproj"
 COPY . .
 RUN dotnet build "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/build
