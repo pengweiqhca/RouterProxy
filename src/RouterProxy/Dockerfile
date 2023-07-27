@@ -17,7 +17,7 @@ COPY . .
 RUN dotnet build "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "src/RouterProxy/RouterProxy.csproj" -c Release -o /app/publish
 
 FROM base AS final
 COPY --from=publish /app/publish .
